@@ -24,7 +24,7 @@ Hence this documentation is based on Windows and PowerShell :)
 ### 1. install
 
 ```
-pip install https://github.com/Take-Me1010/PyComArch.git
+pip install git+https://github.com/Take-Me1010/PyComArch
 ```
 
 Or you can download pycomarch folder and using is by setting an alias for `cli.py`.
