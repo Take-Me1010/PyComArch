@@ -49,7 +49,7 @@ def parse() -> Args:
     args = Args(
         namespace.src, namespace.dest,
         namespace.include_patterns, namespace.exclude_patterns,
-        namespace.no_recursive
+        namespace.recursive
     )
     
     isvalid, reason = args.validate()
