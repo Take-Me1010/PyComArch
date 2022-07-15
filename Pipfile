@@ -11,6 +11,7 @@ pipenv-setup = "*"
 pyzipper = {editable = true, path = "."}
 
 [scripts]
+test = "python -m unittest discover test"
 make = "pipenv-setup sync"
 
 [requires]
