@@ -1,7 +1,7 @@
 
 import unittest
 
-from pyzipper import zipper
+from pycomarch import zipper
 
 class TestPatterns(unittest.TestCase):
     def test_exclude_with_include(self):
