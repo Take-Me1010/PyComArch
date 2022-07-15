@@ -184,7 +184,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            "pyzipper=pyzipper.cli:main"
+            "pycomarch=pycomarch.cli:main"
         ]
     }
 )
