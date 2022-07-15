@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+auto-py-to-exe = "*"
+pipenv-setup = "*"
+pyzipper = {editable = true, path = "."}
+
+[scripts]
+make = "pipenv-setup sync"
+
+[requires]
+python_version = "3.10"
