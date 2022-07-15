@@ -37,8 +37,8 @@ def parse() -> Args:
     
     parser.add_argument("dest", type=Path, help="a destination file name")
     parser.add_argument("src", type=Path, help="a src file or directory to zip")
-    parser.add_argument("--include-patterns", nargs="*", help="a list of patterns to include files or directories even if it matches exclude_patterns. You can use any rule supported by glob.")
-    parser.add_argument("-x", "--exclude-patterns", nargs="*", help="a list of patterns to ignore files or directories. You can use any rule supported by glob.")
+    parser.add_argument("--include-patterns", nargs="*", default=[], help="a list of patterns to include files or directories even if it matches exclude_patterns. You can use any rule supported by glob.")
+    parser.add_argument("-x", "--exclude-patterns", nargs="*", default=[], help="a list of patterns to ignore files or directories. You can use any rule supported by glob.")
     parser.add_argument("-r", "--recursive", action="store_true", help="determine if zip directory recursively.")
     parser.add_argument("-v", "--verbose", action="store_true")
     
