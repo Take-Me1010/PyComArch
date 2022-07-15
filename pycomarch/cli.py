@@ -32,7 +32,7 @@ class Args:
 
 def parse() -> Args:
     parser = argparse.ArgumentParser(
-        description="A CLI tool to zip with useful options"
+        description="A CLI tool to compress archives with useful features."
     )
     
     parser.add_argument("dest", type=Path, help="a destination file name")
