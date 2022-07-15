@@ -16,8 +16,8 @@ def is_exclude(name: str, include_patterns: List[str], exclude_patterns: List[st
     exclude = is_match(name, exclude_patterns)
     return not include and exclude
 
-def get_files_from_directory_to_zip(root: Path, include_patterns: List[str], exclude_patterns: List[str], recursive: bool = True) -> list[Path]:
-    result: list[Path] = []
+def get_files_from_directory_to_zip(root: Path, include_patterns: List[str], exclude_patterns: List[str], recursive: bool = True) -> List[Path]:
+    result: List[Path] = []
     for f in root.glob("*"):
         if is_exclude(f.name, include_patterns, exclude_patterns):
             continue
