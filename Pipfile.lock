@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ecddf89707ba201e8ccc4429bc2f685cfca30d9686670112a27c3759355d50fb"
+            "sha256": "7ac92d989bbd74de8b6e70f1e8057a63145ef80d063bb147e2c82814b8e25ee1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -382,6 +382,10 @@
             "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==0.2.3"
         },
+        "pycomarch": {
+            "editable": true,
+            "path": "."
+        },
         "pycparser": {
             "hashes": [
                 "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9",
@@ -437,10 +441,6 @@
             ],
             "markers": "sys_platform == 'win32'",
             "version": "==0.2.0"
-        },
-        "pyzipper": {
-            "editable": true,
-            "path": "."
         },
         "requests": {
             "hashes": [

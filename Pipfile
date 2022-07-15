@@ -8,7 +8,7 @@ name = "pypi"
 [dev-packages]
 auto-py-to-exe = "*"
 pipenv-setup = "*"
-pyzipper = {editable = true, path = "."}
+pycomarch = {editable = true, path = "."}
 
 [scripts]
 test = "python -m unittest discover test"

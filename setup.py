@@ -36,7 +36,7 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name="pyzipper",  # Required
+    name="pycomarch",  # Required
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
     #
@@ -47,7 +47,7 @@ setup(
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description="A CLI tool to zip with useful options",  # Optional
+    description="A CLI tool to compress archives with useful features.",  # Optional
     # This is an optional longer description of your project that represents
     # the body of text which users will see when they visit PyPI.
     #
@@ -72,10 +72,10 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url="https://github.com/Take-Me1010/pyzipper",  # Optional
+    url="https://github.com/Take-Me1010/PyComArch",  # Optional
     # This should be your name or the name of the organization which owns the
     # project.
-    author="The Python Packaging Authority",  # Optional
+    author="Take-Me1010",  # Optional
     # This should be a valid email address corresponding to the author listed
     # above.
     author_email="",  # Optional
@@ -118,7 +118,7 @@ setup(
     #
     #   py_modules=["my_module"],
     #
-    packages=["pyzipper"],  # Required
+    packages=["pycomarch"],  # Required
     # Specify which Python versions you support. In contrast to the
     # 'Programming Language' classifiers above, 'pip install' will check this
     # and refuse to install the project if the version does not match. If you
@@ -179,10 +179,8 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
-        "Bug Reports": "https://github.com/pypa/sampleproject/issues",
-        "Funding": "https://donate.pypi.org",
-        "Say Thanks!": "http://saythanks.io/to/example",
-        "Source": "https://github.com/pypa/sampleproject/",
+        "Bug Reports": "https://github.com/Take-Me1010/PyComArch/issues",
+        "Source": "https://github.com/Take-Me1010/PyComArch",
     },
     entry_points={
         'console_scripts': [
