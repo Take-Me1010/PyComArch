@@ -2,11 +2,11 @@
 from pathlib import Path
 from typing import List
 import zipfile
-import re
+import fnmatch
 
 def is_match(name: str, patterns: List[str]):
     for pattern in patterns:
-        if re.match(pattern, name):
+        if fnmatch.fnmatch(name, pattern):
             return True
     
     return False
