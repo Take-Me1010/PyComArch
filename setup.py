@@ -118,7 +118,7 @@ setup(
     #
     #   py_modules=["my_module"],
     #
-    packages=find_packages("src"),  # Required
+    packages=["pyzipper"],  # Required
     # Specify which Python versions you support. In contrast to the
     # 'Programming Language' classifiers above, 'pip install' will check this
     # and refuse to install the project if the version does not match. If you
@@ -184,4 +184,9 @@ setup(
         "Say Thanks!": "http://saythanks.io/to/example",
         "Source": "https://github.com/pypa/sampleproject/",
     },
+    entry_points={
+        'console_scripts': [
+            "pyzipper=pyzipper.cli:main"
+        ]
+    }
 )
