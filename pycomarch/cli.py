@@ -16,6 +16,7 @@ class Args:
     include_patterns: List[str]
     exclude_patterns: List[str]
     recursive: bool
+    one_dir: bool
     
     class InValidArgumentsError(Exception):
         pass
@@ -40,6 +41,7 @@ def parse() -> Args:
     parser.add_argument("--include-patterns", nargs="*", default=[], help="a list of patterns to include files or directories even if it matches exclude_patterns. You can use any rule supported by glob.")
     parser.add_argument("-x", "--exclude-patterns", nargs="*", default=[], help="a list of patterns to ignore files or directories. You can use any rule supported by glob.")
     parser.add_argument("-r", "--recursive", action="store_true", help="determine if zip directory recursively.")
+    parser.add_argument("--one-dir", action="store_true", help = "determine nesting the zip file. When `dest` = temp.zip and set `--one-dir`, then the output zip file is \"temp.zip\" whose content is the directory \"temp/\" including the files in the src.")
     parser.add_argument("-v", "--verbose", action="store_true")
     
     namespace = parser.parse_args()
@@ -49,7 +51,8 @@ def parse() -> Args:
     args = Args(
         namespace.src, namespace.dest,
         namespace.include_patterns, namespace.exclude_patterns,
-        namespace.recursive
+        namespace.recursive,
+        namespace.one_dir
     )
     
     isvalid, reason = args.validate()
@@ -63,7 +66,7 @@ def parse() -> Args:
 def main():
     args = parse()
     zipper.zip_files(
-        args.src, args.dest, args.include_patterns, args.exclude_patterns, recursive=args.recursive
+        args.src, args.dest, args.include_patterns, args.exclude_patterns, recursive=args.recursive, one_dir=args.one_dir
     )
 
 if __name__ == '__main__':

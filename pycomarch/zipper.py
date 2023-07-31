@@ -31,13 +31,17 @@ def get_files_from_directory_to_zip(root: Path, include_patterns: List[str], exc
     
     return result
 
-def write(dest, files_full, files_relative):
+def write(dest: Path, files_full: List[Path], files_relative: List[Path]):
     with zipfile.ZipFile(str(dest), mode="w") as zf:
         for full, relative in zip(files_full, files_relative):
             zf.write(str(full), arcname=str(relative))
 
-def zip_files(src: Path, dest: Path, include_patterns: List[str] = [], exclude_patterns: List[str] = [], recursive: bool = False):
+def zip_files(src: Path, dest: Path, include_patterns: List[str] = [], exclude_patterns: List[str] = [], recursive: bool = False, one_dir = False):
     files_to_zip = get_files_from_directory_to_zip(src, include_patterns, exclude_patterns, recursive)
     # 相対パスじゃないと生成されるzipファイルがフルパスを反映してしまう
     files_relative = [f.relative_to(src) for f in files_to_zip]
+    
+    if one_dir:
+        files_relative = [dest.stem / relative for relative in files_relative]
+    
     write(dest, files_to_zip, files_relative)
