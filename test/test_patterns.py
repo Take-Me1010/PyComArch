@@ -19,3 +19,13 @@ class TestPatterns(unittest.TestCase):
                 actual = zipper.is_exclude(name, include_patterns, exclude_patterns)
                 self.assertEqual(expect, actual)
 
+    def test_include_only(self):
+        inc = ["#*"]
+        cases = [
+            ("#hello", False),
+            ("temp", False),
+        ]
+        for name, expect in cases:
+            with self.subTest(name=name):
+                actual = zipper.is_exclude(name, inc, [])
+                self.assertEqual(expect, actual)
